@@ -1,21 +1,19 @@
 #include <stdio.h>
 int main() {
-    int populacao;
-    int ponto_t;
-    int populacao2;
-    int ponto_t2;
-    int cidade;
-    int city;
-    float area;
-    float PIB;
-    float area2;
-    float PIB2;
-    char estado [20];
-    char state [20];
-    char nome [30];
-    char nome_ [30];
-        //variáveis bem separadas para facilitar sua identificação
-        //Seções separadas po espaços em branco para melhor organizar
+    //início do nível novato
+    int populacao, populacao2;
+    int ponto_t, ponto_t2;
+    int cidade, city;
+    float area, area2;
+    float PIB, PIB2;
+    char estado [20], state [20];
+    char nome [30], nome_ [30];
+    //início do nível aventureiro
+    float pib_;
+    float pib_2;
+    float demo;
+    float demo2;
+
     printf ("Bem vindo ao Super Trunfo! \n");
     printf ("Neste jogo, teremos que cadastrar cartas de cidades com suas informações e atributos.\n");
     printf ("Agora vamos cadastrar duas cartas. \n");
@@ -30,9 +28,9 @@ int main() {
     scanf ("%d", &populacao);
     printf ("Agora nos informe quantos pontos turísticos a sua cidade tem: \n");
     scanf ("%d", &ponto_t);
-    printf ("Ótimo, agora vamos cadastrar a área. Informe quantos quilômetros quadrados a sua cidade possui: \n");
+    printf ("Ótimo, agora vamos cadastrar a área. Informe quantos Km² a sua cidade possui: \n");
     scanf ("%f", &area);            
-    printf("Excelente! Por último, informe o PIB (em milhão) da sua cidade: \n");
+    printf("Excelente! Por último, informe o PIB (em bilhão) da sua cidade: \n");
     scanf("%f", &PIB);
     printf(" \n");
     printf ("Finalizamos a primeira carta! Agora vamos criar a segunda. \n");
@@ -48,9 +46,9 @@ int main() {
     scanf ("%d", &populacao2);
     printf ("Agora nos informe quantos pontos turísticos a sua cidade tem: \n");
     scanf ("%d", &ponto_t2);
-    printf ("Ótimo, agora vamos cadastrar a área. Informe quantos quilômetros quadrados a sua cidade possui: \n");
+    printf ("Ótimo, agora vamos cadastrar a área. Informe quantos Km² a sua cidade possui: \n");
     scanf ("%f", &area2);            
-    printf("Excelente! Por último, informe o PIB (em milhão) da sua cidade: \n");
+    printf("Excelente! Por último, informe o PIB (em bilhão) da sua cidade: \n");
     scanf("%f", &PIB2);
     printf(" \n");
 
@@ -62,8 +60,12 @@ int main() {
     printf("Nome: %s \n", nome);
     printf("População: %d habitantes \n", populacao);
     printf("Quantidade de pontos turísticos: %d \n", ponto_t);
-    printf("Área da cidade: %.2f quilômetros quadrados \n", area);
-    printf("PIB da cidade: %.3f milhões de reais \n", PIB);
+    printf("Área da cidade: %.2f Km² \n", area);
+    printf("PIB da cidade: %.3f bilhões de reais \n", PIB);
+    demo = populacao / area;
+    printf("Densidade demográfica da cidade: %.3f habitantes por Km² \n", demo);
+    pib_ = (PIB*1000000000  / populacao);
+    printf("PIB Per Capita da cidade: %.3f reais \n", pib_);
     printf("===================================== \n");
     printf(" \n");
     printf("===================================== \n");
@@ -73,8 +75,12 @@ int main() {
     printf("Nome: %s \n", nome_);
     printf("População: %d habitantes \n", populacao2);
     printf("Quantidade de pontos turísticos: %d \n", ponto_t2);
-    printf("Área da cidade: %.2f quilômetros quadrados \n", area2);
-    printf("PIB da cidade: %.3f milhões de reais \n ", PIB2);
+    printf("Área da cidade: %.2f Km² \n", area2);
+    printf("PIB da cidade: %.3f bilhões de reais \n", PIB2);
+    demo2 =  populacao2 / area2;
+    printf("Densidade demográfica da cidade: %.3f habitantes por Km² \n", demo2);
+    pib_2 = (PIB2*1000000000 / populacao2);
+    printf("PIB Per Capita da cidade: %.3f reais \n", pib_2);
     printf("===================================== \n");
     printf(" \n");
         return 0;
