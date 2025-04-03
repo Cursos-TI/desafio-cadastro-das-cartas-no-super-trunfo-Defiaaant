@@ -18,6 +18,7 @@ int main() {
     float super_poder, SUPER_PODER;
     int carta = 1;
 
+    //início do cadastro das cartas
     printf ("Bem vindo ao Super Trunfo! \n");
     printf ("Neste jogo, teremos que cadastrar cartas de cidades com suas informações e atributos.\n");
     printf ("Em seguida faremos uma comparação das cartas com base nos atributos apresentados.\n");
@@ -57,6 +58,7 @@ int main() {
     scanf("%f", &PIB2);
     printf(" \n");
 
+    //início da exibição das cartas cadastradas
     printf("Agora que cadastramos as suas duas cartas, vamos vizualizar o resultado da comparação: \n");
     printf(" \n");
     printf("Código do município: %s%d \n", estado, cidade);
@@ -97,6 +99,7 @@ int main() {
     super_poder = (populacao + area + PIB + pib_ + (1 / demo));
     SUPER_PODER = (populacao2 + area2 + PIB2 + pib_2 + (1 / demo2));
 
+    //início da comparação utilizando lógica de "maior que" e "menor que"
     printf("==================================== \n");
     printf("RESULTADO DA COMPARAÇÃO \n");
     printf("População: Carta %d venceu! (%d) \n", (carta + (populacao < populacao2)), (populacao < populacao2)); 
