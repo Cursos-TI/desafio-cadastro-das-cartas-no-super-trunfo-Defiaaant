@@ -7,7 +7,7 @@ int main() {
     int cidade, city;
     float area, area2;
     float PIB, PIB2;
-    char estado [20], state [20];
+    char estado [30], state [30];
     char nome [30], nome_ [30];
     float pib_;
     float pib_2;
@@ -31,7 +31,7 @@ int main() {
     printf("Agora nomeie a sua cidade: \n");
     scanf("%s", &nome);
     printf ("Agora, informe a população da sua cidade: \n");
-    scanf ("%d", &populacao);
+    scanf ("%ld", &populacao);
     printf ("Agora nos informe quantos pontos turísticos a sua cidade tem: \n");
     scanf ("%d", &ponto_);
     printf ("Ótimo, agora vamos cadastrar a área. Informe quantos Km² a sua cidade possui: \n");
@@ -50,7 +50,7 @@ int main() {
     printf("Agora nomeie a sua cidade: \n");
     scanf("%s", &nome_);
     printf ("Agora, informe a população da sua cidade: \n");
-    scanf ("%d", &populacao2);
+    scanf ("%ld", &populacao2);
     printf ("Agora nos informe quantos pontos turísticos a sua cidade tem: \n");
     scanf ("%d", &ponto_2);
     printf ("Ótimo, agora vamos cadastrar a área. Informe quantos Km² a sua cidade possui: \n");
@@ -67,7 +67,7 @@ int main() {
     printf("Estado: %s \n", estado);
     printf("Cidade: %d \n", cidade);
     printf("Nome: %s \n", nome);
-    printf("População: %d habitantes \n", populacao);
+    printf("População: %ld habitantes \n", populacao);
     printf("Quantidade de pontos turísticos: %d \n", ponto_);
     printf("Área da cidade: %.2f Km² \n", area);
     printf("PIB da cidade: %.3f bilhões de reais \n", PIB);
@@ -85,7 +85,7 @@ int main() {
     printf("Estado: %s \n", state);
     printf("Cidade: %d \n", city);
     printf("Nome: %s \n", nome_);
-    printf("População: %d habitantes \n", populacao2);
+    printf("População: %ld habitantes \n", populacao2);
     printf("Quantidade de pontos turísticos: %d \n", ponto_2);
     printf("Área da cidade: %.2f Km² \n", area2);
     printf("PIB da cidade: %.3f bilhões de reais \n", PIB2);
