@@ -1,7 +1,7 @@
 #include <stdio.h>
+
 int main() {
-    //início do nível novato
-    //início das mudanças para o nível mestre
+    //Variáveis para o cadastro de diferentes atributos para as cartas
     unsigned long int populacao, populacao2;
     int ponto_, ponto_2;
     int cidade, city;
@@ -9,21 +9,21 @@ int main() {
     float PIB, PIB2;
     char estado [20], state [20];
     char nome [30], nome_ [30];
-    //início do nível aventureiro
     float pib_;
     float pib_2;
     float demo;
     float demo2;
-    //demais mudanças para o nível mestre
     float super_poder, SUPER_PODER;
     int carta = 1;
 
-    //início do cadastro das cartas
+    //Breve apresentação do jogo
     printf ("Bem vindo ao Super Trunfo! \n");
     printf ("Neste jogo, teremos que cadastrar cartas de cidades com suas informações e atributos.\n");
     printf ("Em seguida faremos uma comparação das cartas com base nos atributos apresentados.\n");
     printf ("Agora vamos cadastrar duas cartas. \n");
 
+    //Incio do espaço de interação´
+    //Cadastro da primeira carta com o armazenamento dos valores nas variáveis
     printf("Primeiro, escolha uma letra de A até H, ela definirá o seu estado: \n");
     scanf("%s", &estado);
     printf("Escolha também um número de 1 até 4, ele definirá o código da sua cidade \n");
@@ -42,6 +42,7 @@ int main() {
     printf ("Finalizamos a primeira carta! Agora vamos criar a segunda. \n");
     printf(" \n");
 
+    //cadastro da segunda carta, utilizando o mesmo processo que a primeira
     printf("Primeiro, escolha uma letra de A até H, ela definirá o seu estado: \n");
     scanf("%s", &state);
     printf("Escolha também um número de 1 até 4, ele definirá o código da sua cidade \n");
@@ -58,9 +59,10 @@ int main() {
     scanf("%f", &PIB2);
     printf(" \n");
 
-    //início da exibição das cartas cadastradas
+    //Exibição das cartas cadastradas
     printf("Agora que cadastramos as suas duas cartas, vamos vizualizar o resultado da comparação: \n");
     printf(" \n");
+    //1º carta
     printf("Código do município: %s%d \n", estado, cidade);
     printf("Estado: %s \n", estado);
     printf("Cidade: %d \n", cidade);
@@ -70,12 +72,13 @@ int main() {
     printf("Área da cidade: %.2f Km² \n", area);
     printf("PIB da cidade: %.3f bilhões de reais \n", PIB);
 
-    demo = populacao / area;
+    demo = populacao / area; //Cálculo da densidade demográfica
 
     printf("Densidade demográfica da cidade: %.3f habitantes por Km² \n", demo);
 
-    pib_ = (PIB*1000000000  / populacao);
+    pib_ = (PIB*1000000000  / populacao); //Cálculo do pib per capita
     
+    //2º carta
     printf("PIB Per Capita da cidade: %.3f reais \n", pib_);
     printf(" \n");
     printf("Código do município: %s%d \n", state, city);
@@ -87,15 +90,17 @@ int main() {
     printf("Área da cidade: %.2f Km² \n", area2);
     printf("PIB da cidade: %.3f bilhões de reais \n", PIB2);
 
-    demo2 =  populacao2 / area2;
+    demo2 =  populacao2 / area2; //Cálculo da densidade demográfica
     
     printf("Densidade demográfica da cidade: %.3f habitantes por Km² \n", demo2);
 
-    pib_2 = (PIB2*1000000000 / populacao2);
+    pib_2 = (PIB2*1000000000 / populacao2); //Cálculo do pib per capita
     
     printf("PIB Per Capita da cidade: %.3f reais \n", pib_2);
     printf(" \n");
+    //Fim da exibição das cartas
 
+    //Cálculo dos "super poderes das cartas"
     super_poder = (populacao + area + PIB + pib_ + (1 / demo));
     SUPER_PODER = (populacao2 + area2 + PIB2 + pib_2 + (1 / demo2));
 
@@ -110,5 +115,6 @@ int main() {
     printf("PIB Per Capita: Carta %d venceu! (%d) \n", (carta + (pib_ < pib_2)), (pib_ < pib_2));
     printf("Super poder: Carta %d venceu! (%d) \n", (carta + (super_poder < SUPER_PODER)), (super_poder < SUPER_PODER));
     printf("==================================== \n");
+    //Fim da exibição.
         return 0;
 }
